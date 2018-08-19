@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_guide"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/pass_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_margin="16dp"
+
+        android:padding="2dp"
+        android:text="SKIP"
+        android:textColor="#e7e7e7"
+        android:textSize="@dimen/text_size_12"
+        android:visibility="visible" />
+
+
+</LinearLayout>
