@@ -18,7 +18,8 @@
     <com.dilidolo.hi.library.BridgeWebView
         android:id="@+id/webview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent"
+        android:layerType="hardware">
     </com.dilidolo.hi.library.BridgeWebView>
     <!--<TextView-->
         <!--android:layout_width="match_parent"-->

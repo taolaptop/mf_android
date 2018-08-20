@@ -83,8 +83,8 @@ public class MyFragment extends Fragment {
             }
         });
 
-        webview.loadUrl("file:///android_asset/my.html");
-//        webview.loadUrl("http://192.168.3.81:8081/#/my");
+//        webview.loadUrl("file:///android_asset/my.html");
+        webview.loadUrl("http://192.168.3.81:8080");
         return view;
     }
 

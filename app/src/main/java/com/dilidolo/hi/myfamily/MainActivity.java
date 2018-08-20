@@ -22,7 +22,7 @@ import com.dilidolo.hi.myfamily.model.ZoneItem;
 import com.dilidolo.hi.myfamily.naviPages.MapFragment;
 import com.dilidolo.hi.myfamily.naviPages.ZoneFragment;
 
-public class MainActivity extends AppCompatActivity implements MyFragment.OnFragmentInteractionListener ,ZoneFragment.OnListFragmentInteractionListener{
+public class MainActivity extends AppCompatActivity implements MyFragment.OnFragmentInteractionListener, ZoneFragment.OnListFragmentInteractionListener {
 
     BottomNavigationView bottomNavigationView;
     RelativeLayout map_layout;
@@ -99,6 +99,14 @@ public class MainActivity extends AppCompatActivity implements MyFragment.OnFrag
             map_Fragment = new MapFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_map, (Fragment) map_Fragment).commit();
         }
+        if (zone_Fragment == null) {
+            zone_Fragment = new ZoneFragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_group, (Fragment) zone_Fragment).commit();
+        }
+        if (my_Fragment == null) {
+            my_Fragment = new MyFragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_my, (Fragment) my_Fragment).commit();
+        }
         updateFragmentLayoutStatus(R.id.fragment_map);
     }
 
@@ -137,7 +145,6 @@ public class MainActivity extends AppCompatActivity implements MyFragment.OnFrag
         findViewById(R.id.fragment_my).setVisibility(View.GONE);
         findViewById(fragment_id).setVisibility(View.VISIBLE);
     }
-
 
 
     @Override

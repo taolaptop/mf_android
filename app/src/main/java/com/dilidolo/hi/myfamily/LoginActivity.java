@@ -73,7 +73,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         setContentView(R.layout.activity_login);
         // Set up the login form.
         mMobileView = (AutoCompleteTextView) findViewById(R.id.mobile);
-        populateAutoComplete();
+        //populateAutoComplete();
 
         mPasswordView = (EditText) findViewById(R.id.password);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
@@ -193,9 +193,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             mAuthTask = new UserLoginTask(email, password);
             try {
                 Boolean aBoolean = mAuthTask.execute((Void) null).get();
-                if (aBoolean){
-removeAllCookie();
-synCookies("dilidolo.com");
+                if (aBoolean) {
+                    removeAllCookie();
+                    synCookies("192.168.3.81");
 
                     onBackPressed();
                 }
@@ -223,7 +223,7 @@ synCookies("dilidolo.com");
     }
 
     // 设置cookie
-    public  void synCookies( String url) {
+    public void synCookies(String url) {
         cookieManager = CookieManager.getInstance();
 //        CookieManager cookieManager = CookieManager.getInstance();
         cookieManager.setCookie(url, "mobile=1243432");
